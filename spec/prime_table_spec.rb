@@ -4,7 +4,7 @@ describe PrimeTable do
   before do
     srand(5)
   end
-  let(:table) {PrimeTable.new(rand(5))}
+  let(:table) {PrimeTable.new(rand(1..5))}
 
   describe "#is_prime?" do
     it "returns true if a number is prime" do
