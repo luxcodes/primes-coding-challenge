@@ -43,4 +43,22 @@ class PrimeTable
     end
     primes
   end
+
+  def make_table_array
+    return nil if @size == 0
+    result = []
+    primes = make_primes
+    result << primes
+
+    primes.each do |i|
+      temp_arr = []
+      temp_arr << i
+      result << temp_arr
+
+      primes.each do |j|
+        temp_arr << i * j
+      end
+    end
+    result
+  end
 end
