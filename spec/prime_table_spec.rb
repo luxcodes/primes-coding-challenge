@@ -29,6 +29,15 @@ describe PrimeTable do
     end
   end
 
+  describe "#make_table_array" do
+    before do
+      srand(5)
+    end
+    it "returns multidemensional array of prime multiplication table" do
+      expect(table.make_table_array.size).to eq(table.size+1)
+    end
+  end
+
   describe "#print_table" do
     before do
       srand(5)
