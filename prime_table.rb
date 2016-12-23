@@ -44,6 +44,24 @@ class PrimeTable
     primes
   end
 
+  def print_table
+    primes = make_primes
+    test_arr = []
+
+    print '     '
+    primes.each {|i| print "%-3d  " % i}
+    print "\n     "
+    primes.each {|i| print '---- '}
+    print "\n"
+
+    primes.each do |j|
+      print "%-3d| " % j
+      primes.each {|i| test_arr << (i*j); print "%-3d  " % (i*j)}
+      print "\n"
+    end
+    test_arr
+  end
+
   def make_table_array
     return nil if @size == 0
     result = []
