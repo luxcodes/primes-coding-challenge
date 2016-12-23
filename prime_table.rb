@@ -24,4 +24,23 @@ class PrimeTable
       return true
     end
   end
+
+  def make_primes
+    primes = []
+    starting_val = 2
+    counter = 0
+    while counter < @size
+      current_val = 2
+      while current_val <= starting_val
+        break if starting_val % current_val == 0
+        current_val += 1
+      end
+      if current_val == starting_val
+        primes << starting_val
+        counter += 1
+      end
+      starting_val += 1
+    end
+    primes
+  end
 end
