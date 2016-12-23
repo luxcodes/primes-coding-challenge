@@ -2,7 +2,7 @@ require_relative "../prime_table"
 
 describe PrimeTable do
   before do
-    srand(5)
+    srand()
   end
   let(:table) {PrimeTable.new(rand(1..5))}
 
@@ -17,7 +17,7 @@ describe PrimeTable do
 
   describe "#make_primes" do
     before do
-      srand(5)
+      srand()
     end
     it "returns an array of primes" do
       table.make_primes.each do |n|
@@ -31,7 +31,7 @@ describe PrimeTable do
 
   describe "#make_table_array" do
     before do
-      srand(5)
+      srand()
     end
     it "returns multidemensional array of prime multiplication table" do
       expect(table.make_table_array.size).to eq(table.size+1)
@@ -40,7 +40,7 @@ describe PrimeTable do
 
   describe "#print_table" do
     before do
-      srand(5)
+      srand()
     end
     it "prints correct values to console" do
       prime_array = table.make_primes
