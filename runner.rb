@@ -8,12 +8,14 @@ if ARGV.any?
     puts "Please use the [--help] flag for more options"
   elsif
     if ARGV[0] == "--help"
-      puts "Usage:"
+      puts ""
+      puts "WELCOME TO LU's PRIME TABLES!"
+      puts "\nUsage:"
       puts "  Please specify the size of your table (if desired)\n"
       puts "  If size is not specified, the size will default to 10"
       puts "\nOptions:\n"
       puts "  [size]       # size of prime multiplication table"
-      puts "  --help        # show usage and options"
+      puts "  --help       # show usage and options"
     else
       table = PrimeTable.new(ARGV[0].to_i)
       puts ""
