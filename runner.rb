@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+# "test again"
 require_relative "prime_table"
 
 if ARGV.any?
